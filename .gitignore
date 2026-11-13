@@ -1,0 +1,52 @@
+# Build products
+/build/
+**/CMakeFiles/
+**/CMakeCache.txt
+*.obj
+*.o
+*.res
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.dll
+*.exe
+!/fr08v101.exe
+
+# Logs, original runtime traces, audio, and rendered captures
+*.log
+*.png
+*.jpg
+*.jpeg
+*.pcm
+*.wav
+*.mp3
+*.avi
+*.mp4
+*.d8
+*.bin
+*.zip
+/native-*.json
+/captures/
+/reference/
+/assets/
+
+# Reverse-engineering tools and reproducible local outputs
+/analysis/tooling/
+/analysis/ghidra-home/
+/analysis/ghidra-temp/
+/analysis/ghidra-cache/
+/analysis/ghidra-work/
+/analysis/ghidra-settings-source/
+/analysis/native-build/
+/analysis/parser-build/
+/analysis/runtime/
+/analysis/native-runtime*/
+/analysis/extracted-textures/*
+!/analysis/extracted-textures/manifest.json
+
+# Local editor and Python caches
+.vs/
+.vscode/
+__pycache__/
+*.pyc

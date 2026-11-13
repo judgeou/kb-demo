@@ -1,0 +1,591 @@
+{
+  "source_exe_sha256": "2b6f58ba715909be1d1276a3f93442421c2a20d89cb1188e6b5d2b7bca840e97",
+  "source": "Original x86 D3D8 CreateTexture/LockRect/UnlockRect, not video frames",
+  "textures": [
+    {
+      "id": 13,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "2e02a02308d3b628d45d2763c73041c31a95b148ae4fb70fd9a20741a7379177"
+    },
+    {
+      "id": 23,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "39eb3951c86ad34fe2cf77c54a4a4b651872cfec8231fbaeba6baad1e1159eaa"
+    },
+    {
+      "id": 33,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "41a501f1ba5b9293c959e544031f006698ff67a3376c92f30e24fa090b98ecbb"
+    },
+    {
+      "id": 43,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "cf74cbf6d610e38a2a1cd72830f4f107828fff5e616bb9ba501675e1e33ee343"
+    },
+    {
+      "id": 53,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "c76718c932987c4e3ab95eb199420e8315a51dceeccf77f5bf052000407a36b7"
+    },
+    {
+      "id": 63,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "30417ca397e044810cf58ab97b88ef529b0de9d88c9ef74d2ae973c809c98dbb"
+    },
+    {
+      "id": 73,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "a66817d78d9f661fff52bc1141c2a195d1fc8efe19613149ec461d644d590461"
+    },
+    {
+      "id": 83,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "83b52e1d127df6247dec59ae033bc48a34b76fb2e3055a4cf6f47b027a11eaae"
+    },
+    {
+      "id": 93,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "65ec566c6f177e51a2e9e5ec5415c471ebb45b2413414d993635cf0950011695"
+    },
+    {
+      "id": 103,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "0d4d03a62df14275c7cbabe9f7d3364a12f70d03e373aca06fa73bc7a60aff04"
+    },
+    {
+      "id": 113,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "122e61cfa30b184cfb6bfa2b6bc66ceaa1089ce46bfffda6eb099506626c40c0"
+    },
+    {
+      "id": 123,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "63c3641c69a172c23735c1ad3b5440f15b4bd3419e7df054139c53b8651301c5"
+    },
+    {
+      "id": 133,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "93fb493f79ee94b3d105a28b8d47f9ba2c7f38b9e77eb1788800a62c7b895607"
+    },
+    {
+      "id": 143,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "0b0bc41b05de7d85d496a0bb602d98a3e420b85d8cecac34b7c4bcd341f83e4b"
+    },
+    {
+      "id": 153,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "8252e84453f72559c49cbbbec7236405088a218d242d134608e541faa8deef52"
+    },
+    {
+      "id": 163,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "e39abce4ab40c734d49b91fdb2cc611fb59ebc3c5a886ba47fe097a54ab91e0d"
+    },
+    {
+      "id": 173,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "89c9f1e0c30d14de1a4d0bf8d3e5e76347bb8366b8e93b5625e3a8653aeaa6d0"
+    },
+    {
+      "id": 183,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "c04a683e634fdb0d7f0f270c4c1df9aefcd756001b9788b05713a24a4daceb59"
+    },
+    {
+      "id": 193,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "6da866ace3b4f5e2bd4c36a3779d49e1787c16d470a72ac7a205583511bc6c5e"
+    },
+    {
+      "id": 203,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "bba65426b222ede70ae0cabf99accdfffb07be9d7dd317785a762f0cd6ae25f2"
+    },
+    {
+      "id": 213,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "bd49424fa4190125c18ae225ec3e8cef880797c77a5fc18735b62cc75067a497"
+    },
+    {
+      "id": 223,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "9bb316c1fb23911e5080c6370b8ac9d6c2f8c1a40e5d3babb5c887ab8490c718"
+    },
+    {
+      "id": 233,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "0feda0d39c18bcbdb6406107dbddac656bc83c548e8ffe001343fbf2b9f5d9f7"
+    },
+    {
+      "id": 243,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "65cdc7524a543c01e02a554b1a88ac2285960943cc405824539aea5476b95cce"
+    },
+    {
+      "id": 253,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "46fb6561c8313fa8bec3c00da7f4546ec003a54a57f357e5b1e50dcce3591eff"
+    },
+    {
+      "id": 263,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "629cb6a2d3b82052936e42e20e6d5055b11a6aaeb1c822fcacdbeb1191edb0d9"
+    },
+    {
+      "id": 273,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "9789d8326b992ba00eebb08ecbf36b74fe619995216bbf89038c2c4ada078299"
+    },
+    {
+      "id": 283,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "8c5cf12a65238f900cd06c560b00dbcd31f86ae826c5ede50ce7a50f592d807e"
+    },
+    {
+      "id": 293,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "74d69acf7e1b8726bb14c4b2fb40831b102be4f4a3383489fd62fb81274e6e76"
+    },
+    {
+      "id": 303,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "57d18a9f330e458be1359b34fc8e4e29c5669cb024fed90f7fd56bbb58a6b83d"
+    },
+    {
+      "id": 313,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "c9f920b203e67f4fd8e256f33fa848d039f820c9d1e7d7f00c2c370508cb2ca3"
+    },
+    {
+      "id": 323,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "b7997c60612a8f60f104b19583162aaac7dde1f1ab2e8ef7c9b935550e2b0aa8"
+    },
+    {
+      "id": 333,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "c172a2a9daad53c284c57da68adb67d299acccb4f1ec6da0ec7220ff74fec511"
+    },
+    {
+      "id": 343,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "2b2de21a9fdbd66ab9fcfa6e62e0e0b75163fd8c9de8d98887cdc745d37b0638"
+    },
+    {
+      "id": 353,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "ae99594ac823b9bb4d4e988dd6e4b5adbe86cec305f93ba4cf55b4ab63be7645"
+    },
+    {
+      "id": 363,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "8dd0a1f1fbfd611c2fbcef46ee2f70ca4d18e37a88f5b25e070b3807810b159d"
+    },
+    {
+      "id": 373,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "be114b6afc4ccd6f4207e64c57389960b5f9c76c151d1c57a8700e0c20db087d"
+    },
+    {
+      "id": 383,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "756f011ae00aff038f5e45f556adf057d8e45d389668577da4f5364233ede646"
+    },
+    {
+      "id": 393,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "413bcd6379c4a1a5dc2226d2aa040c7982c8b735f59756e99311acc4ce976bf2"
+    },
+    {
+      "id": 403,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "174360684c1db4d8e8bdaa0f023d0756886b4d5069c98c66349d53b06e0f9bbc"
+    },
+    {
+      "id": 413,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "e60096ae162d2f7aa8eaba9a13df8e9e45861dab5c4793c598c0298ba8ee69f9"
+    },
+    {
+      "id": 423,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "b15cb274bc6083a47345faea12853ec065eeab70741b6bb6405a0c3b6ae1217d"
+    },
+    {
+      "id": 433,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "ff8fbf75d987cbf09c972f0a9160e42926de0cef3fd9a39803a753887c4acc64"
+    },
+    {
+      "id": 443,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "6e50bf25f897ddc1064b13dae261cc1083da0175373cc8536d88b3491351c96c"
+    },
+    {
+      "id": 453,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "a1a83878e681d4c46f2f8f28d80faabb284ff8a673836cb57b4cf522e65b661d"
+    },
+    {
+      "id": 463,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "bd4b57e4a2ed2f991c40f4a2f6bd9425db8a51fce55c232d6f7f10289d8b460b"
+    },
+    {
+      "id": 473,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "1e8ee0bd50e4d91aff65e61c6ee17f8d0b3d3ea285d1625afc47f8653b01c1d4"
+    },
+    {
+      "id": 483,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "153aec1f88a3160db1b4593a865ff2653b9437d06c1b2c73a22517e5f73a8c71"
+    },
+    {
+      "id": 493,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "c6bfa772ab7da96e9b3fb56df0a2740edf3fed50d741aa9145e5a5f53a271f65"
+    },
+    {
+      "id": 503,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "47f3a14109e32728c1333f79e528b7fba35fae7d9c9615a12f60d138bfcbb373"
+    },
+    {
+      "id": 513,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "dcd11d8fe30a8df93456b124852508075f1c58bde1f699ce090905b676afa121"
+    },
+    {
+      "id": 523,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "5d3de09ec87f82e957a51f63427a133bd2f3c3fceb7465ca20b8eae73a7d524b"
+    },
+    {
+      "id": 533,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "bb43620631172e61d991784a7391681d58c3eb8bd352a46c53139879d617409f"
+    },
+    {
+      "id": 543,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "b7997c60612a8f60f104b19583162aaac7dde1f1ab2e8ef7c9b935550e2b0aa8"
+    },
+    {
+      "id": 553,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "fbb1f1f134fa1343a30de5f756cd28e19384822c13d129b9ab95c74aee8fab42"
+    },
+    {
+      "id": 563,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "cf96ea8c3b7edcc21e0db702d86f929d8650dbd4965c4cc82ea3b5a8edc6c1b3"
+    },
+    {
+      "id": 573,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "5996299401d84acf1d76c53499f3cb31531e6c3a6749f0111a2f6f28d517d218"
+    },
+    {
+      "id": 583,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "045d798f7eae497ab46952756f530c3756014e66d42e45410ac2058cf4c04296"
+    },
+    {
+      "id": 593,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "90032960e4830da20a23f51a48ec8c5f17516da1749ad4ea2aee526d7328a520"
+    },
+    {
+      "id": 603,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "ad92fd3651f974ac82ec46cb51812cb1ee41934b797ea44a823ad0a94d5d62b6"
+    },
+    {
+      "id": 613,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "74e63d129b7a5eba660dda3301cdfa612c9213353f0dbd776a488b3e42c1bae3"
+    },
+    {
+      "id": 623,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "865f021cd2bd78cc80b987a89cb8e0e6736eae4e081072098f9546cc07222b13"
+    },
+    {
+      "id": 633,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "48a703792f9def135155ba461ce5bef2e28453b776adf2a64bfb67e25bf545a0"
+    },
+    {
+      "id": 643,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "0a89ab9214de0b96b64076976d6caaf108bfc9f02950594e83e1f45d9453db08"
+    },
+    {
+      "id": 653,
+      "width": 256,
+      "height": 256,
+      "levels": 9,
+      "format": 21,
+      "bytes": 262144,
+      "sha256": "679652611672d8065c9278446abfb98677beb6759f947a188b7a1639e66a9fa7"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.20)
+project(fr08_rebuilt LANGUAGES CXX RC)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+set_source_files_properties(src/resources.rc PROPERTIES OBJECT_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/src/shaders.hlsl;${CMAKE_CURRENT_SOURCE_DIR}/src/app.manifest")
+add_executable(fr08_d3d12 WIN32 src/main.cpp src/renderer.cpp src/scenes.cpp src/audio.cpp src/resources.rc)
+target_compile_definitions(fr08_d3d12 PRIVATE UNICODE _UNICODE WIN32_LEAN_AND_MEAN NOMINMAX)
+target_compile_options(fr08_d3d12 PRIVATE /W4 /permissive- /utf-8 /EHsc)
+target_link_libraries(fr08_d3d12 PRIVATE d3d12 dxgi d3dcompiler dxguid user32 gdi32 winmm shell32 ole32 windowscodecs)
+add_executable(isolated_run tools/isolated_run.cpp)
+target_link_libraries(isolated_run PRIVATE user32)
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/assets/the_product_main.mp3")
+  add_custom_command(TARGET fr08_d3d12 POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:fr08_d3d12>/assets"
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/assets/the_product_main.mp3" "$<TARGET_FILE_DIR:fr08_d3d12>/assets/the_product_main.mp3")
+endif()

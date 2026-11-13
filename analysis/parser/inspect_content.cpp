@@ -1,0 +1,22 @@
+#include "fr08_content.h"
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include <cstring>
+#include <map>
+#include <stdexcept>
+#include <cmath>
+std::vector<uint8_t>load(const char*path){std::ifstream f(path,std::ios::binary|std::ios::ate);if(!f)throw std::runtime_error(std::string("Cannot read ")+path);auto n=f.tellg();if(n<0||n>32*1024*1024)throw std::runtime_error("Input size limit");std::vector<uint8_t>b((size_t)n);f.seekg(0);f.read((char*)b.data(),n);if(!f)throw std::runtime_error("Truncated input");return b;}
+uint32_t bits(float f){uint32_t n;memcpy(&n,&f,4);return n;}
+int main(int argc,char**argv){try{
+ if(argc<3){std::cerr<<"Usage: fr08_inspect mapped-original-image output.json [oracle-parameters.bin [oracle-keys.bin [oracle-evaluations.bin]]]\n";return 2;}
+ auto c=fr08::Content::parse(load(argv[1]));std::map<int,int>groups;for(auto&n:c.nodes)groups[n.group]++;
+ std::ofstream out(argv[2]);out<<std::setprecision(9)<<"{\n\"format\":\"original FR08 v1.01 content graph\",\n\"source_begin\":"<<c.sourceBegin<<",\n\"source_end\":"<<c.sourceEnd<<",\n\"node_count\":"<<c.nodes.size()<<",\n\"texture_root_count\":"<<c.textureRoots.size()<<",\n\"scene_root_count\":"<<c.sceneRoots.size()<<",\n\"event_count\":"<<c.events.size()<<",\n\"channel_count\":"<<c.channels.size()<<",\n\"group_count\":"<<c.groupCount<<",\n\"key_count\":"<<c.keyCount<<",\n\"parameter_count\":"<<c.parameters.size()<<",\n\"custom_table_count\":"<<c.tables.size()<<",\n\"string_count\":"<<c.strings.size()<<",\n\"operator_groups\":[";
+ bool comma=false;for(auto [group,count]:groups){if(comma)out<<",";comma=true;out<<"{\"id\":"<<group<<",\"nodes\":"<<count<<"}";}out<<"],\n\"events\":[";comma=false;for(auto&e:c.events){if(comma)out<<",";comma=true;out<<"{\"kind\":"<<(int)e.kind<<",\"group\":"<<e.group<<",\"flags\":"<<e.groupFlags<<",\"start\":"<<e.start<<",\"end\":"<<e.end<<",\"duration\":"<<e.duration<<"}";}out<<"],\n\"oracle\":{";
+ unsigned failures=0;
+ if(argc>3){auto b=load(argv[3]);if(b.size()!=c.parameters.size()*4)throw std::runtime_error("Oracle parameter byte count mismatch");unsigned match=0;for(size_t i=0;i<c.parameters.size();i++){float expected;memcpy(&expected,b.data()+i*4,4);if(bits(expected)==bits(c.parameters[i]))match++;else if(failures++<12)std::cerr<<"Parameter mismatch "<<i<<" expected="<<expected<<" actual="<<c.parameters[i]<<" expected_bits="<<std::hex<<bits(expected)<<" actual_bits="<<bits(c.parameters[i])<<std::dec<<"\n";}out<<"\"parameter_bit_matches\":"<<match<<",\"parameter_total\":"<<c.parameters.size();}
+ if(argc>4){auto b=load(argv[4]);if(b.size()!=c.keyCount*24)throw std::runtime_error("Oracle key byte count mismatch");size_t offset=0;unsigned match=0,total=0;for(auto&ch:c.channels){for(size_t i=0;i<ch.keys.size();i++,offset+=24){auto&k=ch.keys[i];int16_t time;float value;memcpy(&time,b.data()+offset,2);memcpy(&value,b.data()+offset+4,4);if(time!=k.time||bits(value)!=bits(k.value))throw std::runtime_error("Oracle raw key mismatch");if(i+1<ch.keys.size()&&ch.mode<3&&ch.keys[i+1].time!=k.time){for(unsigned q=0;q<4;q++){float expected;memcpy(&expected,b.data()+offset+8+q*4,4);total++;if(bits(expected)==bits(k.coefficients[q]))match++;else if(failures++<12)std::cerr<<"Coefficient mismatch key="<<offset/24<<" component="<<q<<" expected="<<expected<<" actual="<<k.coefficients[q]<<"\n";}}}}out<<",\"coefficient_bit_matches\":"<<match<<",\"coefficient_total\":"<<total;}
+ if(argc>5){auto b=load(argv[5]);const float times[]={0,.1f,.333f,.5f,.75f,.9f,1};if(b.size()!=c.channels.size()*sizeof(times))throw std::runtime_error("Oracle evaluations byte count mismatch");unsigned match=0,total=0;for(size_t i=0;i<c.channels.size();i++)for(unsigned q=0;q<7;q++){float expected;memcpy(&expected,b.data()+(i*7+q)*4,4);float actual=c.evaluate(i,times[q]);total++;if(bits(expected)==bits(actual))match++;else if(failures++<12)std::cerr<<"Evaluation mismatch channel="<<i<<" at="<<times[q]<<" expected="<<expected<<" actual="<<actual<<"\n";}out<<",\"evaluation_bit_matches\":"<<match<<",\"evaluation_total\":"<<total;}
+ out<<"},\n\"oracle_mismatches\":"<<failures<<"\n}\n";
+ std::cout<<"Original content parsed in independent C++: nodes="<<c.nodes.size()<<" textures="<<c.textureRoots.size()<<" scenes="<<c.sceneRoots.size()<<" events="<<c.events.size()<<" channels="<<c.channels.size()<<" keys="<<c.keyCount<<" parameters="<<c.parameters.size()<<" oracle_mismatches="<<failures<<"\n";return failures?1:0;
+ }catch(const std::exception&e){std::cerr<<e.what()<<"\n";return 1;}}

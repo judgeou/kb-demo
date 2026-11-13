@@ -1,0 +1,3 @@
+[submodule "analysis/d3d8to9"]
+	path = analysis/d3d8to9
+	url = https://github.com/crosire/d3d8to9.git
